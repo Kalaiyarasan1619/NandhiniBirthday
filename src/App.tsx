@@ -53,14 +53,14 @@ export const App: React.FC = () => {
 
       {/* Top Floating Action Buttons */}
       <div className="fixed top-4 right-4 z-40 flex items-center gap-3">
-        {/* <button
+        <button
           onClick={() => setIsPersonalizeOpen(true)}
           title="Customize Birthday Card"
           className="flex items-center gap-2 bg-white/90 hover:bg-white text-[#333] hover:text-[#ff7882] px-4 py-2 rounded-full border-2 border-[#333] shadow-md hover:shadow-lg transition-all cursor-pointer font-sriracha text-sm font-bold backdrop-blur-xs"
         >
           <Settings className="w-4 h-4" />
           <span>Personalize</span>
-        </button> */}
+        </button>
       </div>
 
       {/* Main App Content Wrapper */}
