@@ -52,7 +52,7 @@ export const App: React.FC = () => {
       <Decorations />
 
       {/* Top Floating Action Buttons */}
-      <div className="fixed top-4 right-4 z-40 flex items-center gap-3">
+      {/* <div className="fixed top-4 right-4 z-40 flex items-center gap-3">
         <button
           onClick={() => setIsPersonalizeOpen(true)}
           title="Customize Birthday Card"
@@ -61,7 +61,7 @@ export const App: React.FC = () => {
           <Settings className="w-4 h-4" />
           <span>Personalize</span>
         </button>
-      </div>
+      </div> */}
 
       {/* Main App Content Wrapper */}
       <div className="w-full flex-1 flex flex-col justify-between max-w-7xl mx-auto relative z-10">
