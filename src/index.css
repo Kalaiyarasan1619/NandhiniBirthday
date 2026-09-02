@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-pink: #feecea;
+    --color-white: #fff;
+    --color-black: #333;
+    --color-text-pink: #ff7882;
+    --color-heart: #F61F1F;
+    --color-bg-letter: #fff8e4;
+    --color-border: #DACCBF;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--color-pink);
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+  }
+}
+
+.font-titan {
+  font-family: "Titan One", cursive, sans-serif;
+}
+
+.font-sriracha {
+  font-family: "Sriracha", cursive, sans-serif;
+}
+
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-coiny {
+  font-family: 'Coiny', cursive;
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.8) 76%, transparent 77%, transparent), 
+    linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0.8) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.8) 76%, transparent 77%, transparent);
+  background-size: 80px 80px;
+}
+
+/* Text Stroke & Shadows */
+.text-stroke-black {
+  text-shadow: 
+    3px 3px 0 #333, 
+    -3px 3px 0 #333, 
+    3px -3px 0 #333, 
+    -3px -3px 0 #333, 
+    3px 6px 0 #333;
+}
+
+/* Keyframe Animations */
+@keyframes translateYFlag {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes txtTranslateY {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes topHat {
+  20%, 30% {
+    top: -30px;
+    transform-origin: left;
+    transform: rotate(-40deg);
+  }
+  35%, 100% {
+    top: -30px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dateOfBirth {
+  20%, 40% {
+    max-width: 0px;
+    height: 0;
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+  45% {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+    max-width: 320px;
+    height: 0px;
+  }
+  50%, 100% {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+    max-width: 320px;
+    height: 50px;
+  }
+}
+
+@keyframes topBoxImage {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleCircle {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1.3);
+  }
+  20% {
+    transform: scale(0.7);
+  }
+  30%, 100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateCircle {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scaleHeart {
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes balloon1 {
+  0%, 50%, 100% {
+    transform-origin: bottom right;
+    transform: rotate(0deg);
+  }
+  25% {
+    transform-origin: bottom right;
+    transform: rotate(4deg);
+  }
+  75% {
+    transform-origin: bottom right;
+    transform: rotate(-4deg);
+  }
+}
+
+@keyframes balloon2 {
+  0%, 50%, 100% {
+    transform-origin: bottom left;
+    transform: rotate(10deg);
+  }
+  25% {
+    transform-origin: bottom left;
+    transform: rotate(6deg);
+  }
+  75% {
+    transform-origin: bottom left;
+    transform: rotate(14deg);
+  }
+}
+
+@keyframes scaleStar {
+  25% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes scaleHeartLetter {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(0.7);
+  }
+  30%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateHeart {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(12deg);
+  }
+  75% {
+    transform: rotate(-12deg);
+  }
+}
+
+.animate-flag-drop {
+  transform: translateY(-200px);
+  animation: translateYFlag 1.5s 0.5s forwards;
+}
+
+.animate-hat-drop {
+  animation: topHat 4s 3.5s forwards ease;
+}
+
+.animate-date-badge {
+  animation: dateOfBirth 4s 5s forwards;
+}
+
+.animate-profile-up {
+  transform: translateY(600px);
+  animation: topBoxImage 2.5s 3.5s forwards cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-scale-in {
+  transform: scale(0);
+  animation: scaleCircle 2s 7s forwards ease-in-out;
+}
+
+.animate-rotate-circle {
+  animation: rotateCircle 6s linear infinite;
+}
+
+.animate-balloon-1 {
+  animation: balloon1 2.5s infinite linear;
+}
+
+.animate-balloon-2 {
+  animation: balloon2 2.5s infinite linear;
+}
+
+.animate-pulse-heart {
+  animation: scaleHeart 1.2s infinite ease-in-out;
+}
+
+.animate-rotate-heart:hover {
+  animation: rotateHeart 0.8s infinite linear;
+}
+
+/* Custom Clip Path Star */
+.clip-star {
+  clip-path: polygon(0 50%, 35% 35%, 50% 0, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%);
+}
